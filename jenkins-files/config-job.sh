@@ -5,6 +5,7 @@ SUBDIR="cucumber"
 GIT_REPO="openSUSE"
 JOBS_DIR=/var/lib/jenkins/jobs
 JOBS_DIR=../../jobs
+DISABLED=false
 
 function configure()
 {
@@ -14,6 +15,7 @@ function configure()
        s!@@GIT_REPO@@!$GIT_REPO!g;
        s!@@BRANCH_NAME@@!$BRANCH_NAME!g;
        s!@@DISTRIBUTION@@!$DISTRIBUTION!g;
+       s!@@DISABLED@@!$DISABLED!g;
        s!@@ID@@!$ID!g;
        s!@@NANNY@@!$NANNY!g" \
       config-job.template > "$JOBS_DIR/$NAME/config.xml"
