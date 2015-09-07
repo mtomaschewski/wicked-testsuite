@@ -25,169 +25,145 @@ NAME="sle12-0-last-direct"
 DISTRIBUTION="SLES 12 SP0 (x86_64)"
 BRANCH_NAME="sle12"
 NANNY="without"
-ID=$((++ID))
-configure
+ID=1 configure
 
 NAME="sle12-0-last-nanny"
 DISTRIBUTION="SLES 12 SP0 (x86_64)"
 BRANCH_NAME="sle12"
 NANNY="with"
-ID=$((++ID))
-configure
+ID=2 configure
 
 NAME="sle12-0-next-direct"
 DISTRIBUTION="SLES 12 SP0 (x86_64)"
 BRANCH_NAME="sle12-next"
 NANNY="without"
-ID=$((++ID))
-configure
+ID=3 configure
 
 NAME="sle12-0-next-nanny"
 DISTRIBUTION="SLES 12 SP0 (x86_64)"
 BRANCH_NAME="sle12-next"
 NANNY="with"
-ID=$((++ID))
-configure
+ID=4 configure
 
 NAME="sle12-1-last-direct"
 DISTRIBUTION="SLES 12 SP1 (x86_64)"
 BRANCH_NAME="sle12-sp1"
 NANNY="without"
-ID=$((++ID))
-configure
+ID=5 configure
 
 NAME="sle12-1-last-nanny"
 DISTRIBUTION="SLES 12 SP1 (x86_64)"
 BRANCH_NAME="sle12-sp1"
 NANNY="with"
-ID=$((++ID))
-configure
+ID=6 configure
 
 NAME="sle12-1-next-direct"
 DISTRIBUTION="SLES 12 SP1 (x86_64)"
 BRANCH_NAME="sle12-sp1-next"
 NANNY="without"
-ID=$((++ID))
-configure
+ID=7 configure
 
 NAME="sle12-1-next-nanny"
 DISTRIBUTION="SLES 12 SP1 (x86_64)"
 BRANCH_NAME="sle12-sp1-next"
 NANNY="with"
-ID=$((++ID))
-configure
+ID=8 configure
 
 NAME="sle12-0-master-direct"
 DISTRIBUTION="SLES 12 SP0 (x86_64)"
 BRANCH_NAME="master"
 NANNY="without"
-ID=$((++ID))
-configure
+DISABLED=true ID=9 configure
 
 NAME="sle12-0-master-nanny"
 DISTRIBUTION="SLES 12 SP0 (x86_64)"
 BRANCH_NAME="master"
 NANNY="with"
-ID=$((++ID))
-configure
+DISABLED=true ID=10 configure
 
 NAME="sle12-1-master-direct"
 DISTRIBUTION="SLES 12 SP1 (x86_64)"
 BRANCH_NAME="master"
 NANNY="without"
-ID=$((++ID))
-configure
+ID=11 configure
 
 NAME="sle12-1-master-nanny"
 DISTRIBUTION="SLES 12 SP1 (x86_64)"
 BRANCH_NAME="master"
 NANNY="with"
-ID=$((++ID))
-configure
+ID=12 configure
 
 NAME="tumbleweed-master-direct"
 DISTRIBUTION="openSUSE Tumbleweed (x86_64)"
 BRANCH_NAME="master"
 NANNY="without"
-ID=$((++ID))
-configure
+ID=13 configure
 
 NAME="tumbleweed-master-nanny"
 DISTRIBUTION="openSUSE Tumbleweed (x86_64)"
 BRANCH_NAME="master"
 NANNY="with"
-ID=$((++ID))
-configure
+ID=14 configure
 
 NAME="sle12-0-testing-direct"
 DISTRIBUTION="SLES 12 SP0 (x86_64)"
 BRANCH_NAME="testing"
 NANNY="without"
-ID=$((++ID))
-configure
+DISABLED=true ID=15 configure
 
 NAME="sle12-0-testing-nanny"
 DISTRIBUTION="SLES 12 SP0 (x86_64)"
 BRANCH_NAME="testing"
 NANNY="with"
-ID=$((++ID))
-configure
+DISABLED=true ID=16 configure
 
 NAME="sle12-1-testing-direct"
 DISTRIBUTION="SLES 12 SP1 (x86_64)"
 BRANCH_NAME="testing"
 NANNY="without"
-ID=$((++ID))
-configure
+ID=17 configure
 
 NAME="sle12-1-testing-nanny"
 DISTRIBUTION="SLES 12 SP1 (x86_64)"
 BRANCH_NAME="testing"
 NANNY="with"
-ID=$((++ID))
-configure
+ID=18 configure
 
 NAME="tumbleweed-testing-direct"
 DISTRIBUTION="openSUSE Tumbleweed (x86_64)"
 BRANCH_NAME="testing"
 NANNY="without"
-ID=$((++ID))
-configure
+ID=19 configure
 
 NAME="tumbleweed-testing-nanny"
 DISTRIBUTION="openSUSE Tumbleweed (x86_64)"
 BRANCH_NAME="testing"
 NANNY="with"
-ID=$((++ID))
-configure
+ID=20 configure
 
 NAME="os132-master-direct"
 DISTRIBUTION="openSUSE 13.2 (x86_64)"
 BRANCH_NAME="master"
 NANNY="without"
-ID=$((++ID))
-configure
+ID=21 configure
 
 NAME="os132-master-nanny"
 DISTRIBUTION="openSUSE 13.2 (x86_64)"
 BRANCH_NAME="master"
 NANNY="with"
-ID=$((++ID))
-configure
+ID=22 configure
 
-#NAME="os132-testing-direct"
-#DISTRIBUTION="openSUSE 13.2 (x86_64)"
-#BRANCH_NAME="testing"
-#NANNY="without"
-#ID=$((ID++))
-#configure
+NAME="os132-testing-direct"
+DISTRIBUTION="openSUSE 13.2 (x86_64)"
+BRANCH_NAME="testing"
+NANNY="without"
+DISABLED=true ID=23 configure
 
-#NAME="os132-testing-nanny"
-#DISTRIBUTION="openSUSE 13.2 (x86_64)"
-#BRANCH_NAME="testing"
-#NANNY="with"
-#ID=$((ID++))
-#configure
+NAME="os132-testing-nanny"
+DISTRIBUTION="openSUSE 13.2 (x86_64)"
+BRANCH_NAME="testing"
+NANNY="with"
+DISABLED=true ID=24 configure
 
 ###
 # User job IDs 30..39, 40..49
