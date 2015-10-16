@@ -133,13 +133,13 @@ NAME="tumbleweed-testing-direct"
 DISTRIBUTION="openSUSE Tumbleweed (x86_64)"
 BRANCH_NAME="testing"
 NANNY="without"
-ID=19 configure
+DISABLED=true ID=19 configure
 
 NAME="tumbleweed-testing-nanny"
 DISTRIBUTION="openSUSE Tumbleweed (x86_64)"
 BRANCH_NAME="testing"
 NANNY="with"
-ID=20 configure
+DISABLED=true ID=20 configure
 
 NAME="os132-master-direct"
 DISTRIBUTION="openSUSE 13.2 (x86_64)"
