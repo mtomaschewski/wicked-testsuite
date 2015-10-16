@@ -165,6 +165,18 @@ BRANCH_NAME="testing"
 NANNY="with"
 DISABLED=true ID=24 configure
 
+NAME="opensuse-leap-master-direct"
+DISTRIBUTION="openSUSE Leap 42.1 (x86_64)"
+BRANCH_NAME="master"
+NANNY="without"
+ID=25 configure
+
+NAME="opensuse-leap-master-nanny"
+DISTRIBUTION="openSUSE Leap 42.1 (x86_64)"
+BRANCH_NAME="master"
+NANNY="with"
+ID=26 configure
+
 ###
 # User job IDs 30..39, 40..49
 ###
