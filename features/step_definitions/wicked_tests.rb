@@ -1024,6 +1024,9 @@ end
 
 Then /^([^ ]*) should be the active link$/ do |interface|
   SUT.test_and_drop_results "log.sh step \"Then #{interface} should be the active link\""
+  # WORKAROUND for bsc#951674, libteam claims UP status while enslaved interfaces are still DOWN
+  local, remote, command = SUT.test_and_drop_results \
+    "sleep 2", "testuser"
 
   # Then check for active port
   out, local, remote, command = SUT.test_and_store_results_together \
