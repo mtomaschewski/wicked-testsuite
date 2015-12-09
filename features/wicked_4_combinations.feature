@@ -81,15 +81,23 @@ Feature: Wicked 4 combinations
     When I create bond0.42(bond0(eth0, eth1), 42) and bond0.73(bond0, 73) from legacy files
     Then bond0.42 should have the correct address
     And bond0.73 should have the correct address
-    And I should be able to ping bond0.42 on the other side
-    And I should be able to ping bond0.73 on the other side
+    #
+    # NOT as long the bond is using LACP -- the underlying
+    # bridges on the VM host, do not forward LACP packets!
+    #
+    #And I should be able to ping bond0.42 on the other side
+    #And I should be able to ping bond0.73 on the other side
 
   Scenario: vlan{bond{Ethernet, Ethernet}}, vlan{same bond} from wicked XML files
     When I create bond0.42(bond0(eth0, eth1), 42) and bond0.73(bond0, 73) from XML files
     Then bond0.42 should have the correct address
     And bond0.73 should have the correct address
-    And I should be able to ping bond0.42 on the other side
-    And I should be able to ping bond0.73 on the other side
+    #
+    # NOT as long the bond is using LACP -- the underlying
+    # bridges on the VM host, do not forward LACP packets!
+    #
+    #And I should be able to ping bond0.42 on the other side
+    #And I should be able to ping bond0.73 on the other side
 
   Scenario: bridge{vlan{bond{Ethernet, Ethernet}}, dummy}, bridge{vlan{same bond}, dummy} from legacy ifcfg files
     When I create br42(bond0.42(bond0(eth0, eth1), 42), dummy0) and br73(bond0.73(bond0, 73), dummy1) from legacy files
