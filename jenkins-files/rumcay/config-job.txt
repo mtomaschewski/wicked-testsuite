@@ -1,0 +1,29 @@
+                | distributions
+                |
+branches        | tumbleweed | sle12-sp0 | sle12-sp1 | sle12-sp2 | leap-42.1 | leap-42.2 | 13.2
+===============================================================================================
+testing		| -          | -         | + (-> -)  | - (-> +)  | -         | -         | -
+master		| +          | -         | + (-> -)  | - (-> +)  | -         | -         | -
+-----------------------------------------------------------------------------------------------
+sle12(sp0)test	| -          | +         | -         | -         | -         | -         | -
+sle12(sp0)next	| -          | +         | -         | -         | -         | -         | +
+sle12(sp0)last	| -          | +         | -         | -         | -         | -         | -
+-----------------------------------------------------------------------------------------------
+sle12-sp1-test	| -          | -         | +         | -         | -         | -         | -
+sle12-sp1-next	| -          | -         | +         | -         | +         | -         | -
+sle12-sp1-last	| -          | -         | +         | -         | -         | -         | -
+-----------------------------------------------------------------------------------------------
+sle12-sp2-test	| -          | -         | -         | - (-> +)  | -         | -         | -
+sle12-sp2-next	| -          | -         | -         | - (-> +)  | -         | +         | -
+sle12-sp2-last	| -          | -         | -         | - (-> +)  | -         | -         | -
+
+
+note: sle12-sp0 branch names unfortunately do not contain -sp0 in their
+      name and there is also no *-last branch, but just and sle12[-sp1]
+
+our commit flow is:
+     --> testing --> master
+                     --[merge]-> (xxx-test -->) xxx-next --[submit]-> xxx(-last)
+
+== 15 * 2 (direct+nanny) -> 30 jobs, not including QA ibs-* jobs testing RPMs
+
