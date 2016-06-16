@@ -255,7 +255,7 @@ popd
 
 ### Remove VMs, but only if the tests did not fail
 
-if [ "$failed" = "no" ]; then
+if [ "$failed" = "no" ] || [[ $flags =~ failure_cleanup ]] ; then
   if [ "$ref" != "" ]; then
     virsh destroy ref-$JOB_NAME
     virsh undefine ref-$JOB_NAME
